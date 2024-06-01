@@ -43,6 +43,32 @@
 /* =================================================================
                         Home-Page-One
 ==================================================================== */
+/* pre-loader styles */
+
+.v-loader {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes arrows {
+  0%,
+  100% {
+    color: black;
+    transform: translateY(0);
+  }
+  50% {
+    color: #3AB493;
+    transform: translateY(20px);
+  }
+}
+
+.v-loader > span {
+  --delay: 0s;
+  animation: arrows 1s var(--delay) infinite ease-in;
+}
+
 /* header starts */
 .main-header{
   position:absolute;
@@ -1780,12 +1806,14 @@ button:focus:not(:focus-visible) {
 }
 .team-image img{
   border-radius: 0px 50px;
+  object-fit: cover;
 }
 .team-content:hover .team-media{
   margin-bottom: 0;
 }
 .team-content:hover .team-info{
-  background: #7FB432;
+  /* background: #7FB432; */
+  background: #647295;
 }
 .team-content:hover .team-info h6,.team-content:hover .team-info p{
   color: #ffffff;
